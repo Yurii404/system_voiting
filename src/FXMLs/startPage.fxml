@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.StartPageController">
+   <right>
+      <StackPane fx:id="stackPaneRight" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: F0FFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="createBuletPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <Button fx:id="addCandidatButton" layoutX="33.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Додати кандидата" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="nameCandidatField" layoutX="62.0" layoutY="219.0" prefHeight="39.0" prefWidth="215.0" promptText="Ім'я" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="postCandidatField" layoutX="62.0" layoutY="161.0" prefHeight="39.0" prefWidth="215.0" promptText="Пост на який балатується" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="104.0" fitWidth="84.0" layoutX="114.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/add_property_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="16.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/marker_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="16.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/male_user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doneAddCandField" layoutX="82.0" layoutY="274.0" text="Кандидат успішно доданий" textFill="RED" underline="true" visible="false">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="registrPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <TextField fx:id="nameField" layoutX="62.0" layoutY="131.0" prefHeight="39.0" prefWidth="215.0" promptText="name" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="registrNewUserButton" layoutX="33.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Зареєструвати" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="loginRegField" layoutX="62.0" layoutY="181.0" prefHeight="39.0" prefWidth="215.0" promptText="login" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="passwordRegField" layoutX="62.0" layoutY="237.0" prefHeight="39.0" prefWidth="215.0" promptText="password" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="96.0" fitWidth="107.0" layoutX="107.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/note_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="15.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/identification_documents_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="15.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="15.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/password_30px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btnBack" fitHeight="30.0" fitWidth="26.0" layoutX="20.0" layoutY="36.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/back_26px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doneRegLabel" layoutX="55.0" layoutY="356.0" text="Користувача успішно зареєстровано" textFill="RED" underline="true" visible="false">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userIsnueField" layoutX="78.0" layoutY="355.0" text="Такий користувач вже існує" textFill="RED" underline="true" visible="false" />
+               </children>
+            </Pane>
+            <Pane fx:id="userElectPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <ComboBox fx:id="selectBuletBox" layoutX="71.0" layoutY="164.0" onMouseClicked="#handleMouseEvent" prefHeight="31.0" prefWidth="214.0" promptText="Оберіть бюлетень" style="-fx-background-radius: 30;" />
+                  <ComboBox fx:id="selectCandidatBox" layoutX="71.0" layoutY="227.0" onMouseClicked="#handleMouseEvent" prefHeight="33.0" prefWidth="214.0" promptText="Оберіть кандидата" style="-fx-background-radius: 30;" />
+                  <Button fx:id="voiceButton" layoutX="33.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Проголосувати" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="102.0" fitWidth="108.0" layoutX="104.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/bulleted_list_64px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="14.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/playlist_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="14.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/male_user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="fildElectField" layoutX="29.0" layoutY="278.0" text="Ви вже голосували бо немаєте права на голос" textFill="RED" underline="true" visible="false">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="doneElectFPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <Label fx:id="doneElectField" layoutX="72.0" layoutY="153.0" prefHeight="47.0" prefWidth="166.0" text="Ваш голос">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="doneElectField1" layoutX="13.0" layoutY="200.0" prefHeight="47.0" prefWidth="283.0" text="успішно зарахований">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="AdminPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="176.0" prefHeight="49.0" prefWidth="287.0" text="Оберіть пункт меню..." textFill="#171717">
+                     <font>
+                        <Font name="Berlin Sans FB" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="clearPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <Button fx:id="clearAllButton" layoutX="33.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Очистити данні" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="80.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/broom_80px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="signUpPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <TextField fx:id="passField" layoutX="56.0" layoutY="192.0" prefHeight="39.0" prefWidth="215.0" promptText="password" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="11.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="11.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/password_30px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="82.0" fitWidth="100.0" layoutX="114.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/client_management_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="registrButton" layoutX="33.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Реєстрація" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="loginField" layoutX="56.0" layoutY="144.0" prefHeight="39.0" prefWidth="215.0" promptText="login" style="-fx-background-color: #FFFAFA; -fx-border-color: #A9A9A9; -fx-border-radius: 30;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="signUpButton" layoutX="33.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Увійти" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="fielFindField" layoutX="71.0" layoutY="231.0" prefHeight="29.0" prefWidth="185.0" text="Такого користувача не існує" textFill="#f50000" underline="true" visible="false">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="resultGolPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;">
+               <children>
+                  <ComboBox fx:id="selectBuletBox1" layoutX="48.0" layoutY="242.0" onMouseClicked="#handleMouseEvent" prefHeight="33.0" prefWidth="214.0" promptText="Оберіть бюлетень " style="-fx-background-radius: 30;" />
+                  <Button fx:id="showResultButton" layoutX="29.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="43.0" prefWidth="253.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Показати результат" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="80.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/check_all_80px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="showResultPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFAFA;" stylesheets="@../css/style.css">
+               <children>
+                  <TableView fx:id="resutTanle" layoutX="28.0" layoutY="127.0" prefHeight="237.0" prefWidth="254.0" style="-fx-background-color: #FFFAFA;">
+                    <columns>
+                      <TableColumn fx:id="columnName" prefWidth="172.0" text="Ім'я" />
+                      <TableColumn fx:id="columnVoices" prefWidth="81.0" text="Голоси" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="66.0" layoutY="22.0" text="Перемогу здобув:">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="winnerLabel" layoutX="36.0" layoutY="60.0" prefHeight="17.0" prefWidth="237.0" text="Переможець">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </right>
+   <left>
+      <StackPane fx:id="stackPaneLeft" prefHeight="400.0" prefWidth="291.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="userMenuPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/style.css">
+               <children>
+                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="137.0">
+                     <children>
+                        <ImageView fx:id="btnClose11" fitHeight="20.0" fitWidth="30.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/delete_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMinimize11" fitHeight="20.0" fitWidth="30.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/minimize_window_32px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Button fx:id="exitAccountButton1" layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Вихід з акаунту" textFill="#3e3f3f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="131.0" fitWidth="126.0" layoutX="83.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/elections_64px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="startPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/style.css">
+               <children>
+                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="137.0">
+                     <children>
+                        <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="30.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/delete_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMinimize" fitHeight="34.0" fitWidth="20.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/minimize_window_32px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="131.0" fitWidth="126.0" layoutX="83.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../png/elections_64px.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="54.0" layoutY="252.0" prefHeight="58.0" prefWidth="194.0" text="Your voice " textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="296.0" prefHeight="58.0" prefWidth="245.0" text=" is important to us" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="adminMenuPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/style.css">
+               <children>
+                  <HBox layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="137.0">
+                     <children>
+                        <ImageView fx:id="btnClose1" fitHeight="20.0" fitWidth="30.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/delete_32px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMinimize1" fitHeight="20.0" fitWidth="30.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../png/minimize_window_32px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Button fx:id="createVoitButton" layoutX="24.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Створити бюлетень" textFill="#3e3f3f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="100.0" layoutY="43.0" text="MENU" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="34.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="resultButton" layoutX="24.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Результат" textFill="#3e3f3f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="exitAccountButton" layoutX="24.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Вихід з акаунту" textFill="#3e3f3f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Button>
+                  <Line endX="70.0" fill="WHITE" layoutX="146.0" layoutY="81.0" startX="-70.0" stroke="WHITE" strokeWidth="4.0" style="-fx-fill: white;" />
+                  <Polygon fill="DODGERBLUE" layoutX="114.0" layoutY="326.0" points="-90.0, -10.0, 154.0, -10.0, 102.0, 50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: black;" />
+                  <Button fx:id="clearButton" layoutX="24.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleButtonAvtion" prefHeight="42.0" prefWidth="244.0" style="-fx-background-radius: 30;" stylesheets="@../css/style.css" text="Очистити данні" textFill="#3e3f3f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </left>
+</BorderPane>

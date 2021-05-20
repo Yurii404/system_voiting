@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VoitingSystemFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VoitingSystemFX_jar</output-path>
+    <root id="archive" name="VoitingSystemFX.jar">
+      <element id="module-output" name="VoitingSystemFX" />
+    </root>
+  </artifact>
+</component>
